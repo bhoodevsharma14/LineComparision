@@ -10,9 +10,20 @@ public class LineComparision {
 	{
 		System.out.println("Welcome to Line Comparision Program");
 		
-		getPoints();
 		
-		System.out.println("The Length of the Line is "+calculateLength(x1, y1, x2, y2));
+		double line1,line2;
+		System.out.println("Getting Coordinates of Line 1");
+		getPoints();
+		line1=calculateLength(x1, y1, x2, y2);
+		
+		System.out.println("Getting Coordinates of Line 2");
+		getPoints();
+		line2=calculateLength(x1, y1, x2, y2);
+		
+		if(line1==line2)
+			System.out.println("Both The Lines Are EQUAL In Length!!");
+		else
+			System.out.println("Both The Lines Are oF DIFFERENT Length!!");
 		
 	}
 	
@@ -26,7 +37,7 @@ public class LineComparision {
 		x2=scan.nextInt();
 		y2=scan.nextInt();
 		
-		System.out.println("These are the coordinates ("+x1+","+y1+") and ("+x2+","+y2+")");
+		System.out.println("\nThese are the coordinates ("+x1+","+y1+") and ("+x2+","+y2+")\n");
 	}
 	
 	static double calculateLength(int x1,int y1,int x2,int y2)
